@@ -12,12 +12,12 @@ function b() {
   }
 }
 function c() {
-  b();
+    b();
 }
-try {
-  c();
+  try {
+    c();
 }
   catch (error) {
     console.log('Catched!');
   }
-  console.log('done!');
+    console.log('done!');
