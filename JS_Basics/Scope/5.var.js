@@ -12,3 +12,19 @@ var poo = '💩';
 var poo = '💩';
 console.log(poo);
 
+// 3. 블록 레벨 스코프 안됨
+var apple = '사과';
+{
+  var apple = '🍎'
+  {
+    var apple = '🍓'
+  }
+  
+}
+console.log(apple);
+
+// 4. 함수 레벨 스코프만 지원 됨
+function example() {
+  var dog = '🐗';
+}
+console.log(dog);
