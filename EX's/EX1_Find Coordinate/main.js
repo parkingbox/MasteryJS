@@ -5,14 +5,20 @@ const target = document.querySelector(".target");
 const vertical = document.querySelector(".vertical");
 const horizontal = document.querySelector(".horizontal");
 
-document.addEventListener("mousemove", (event) => {
-  const X = event.clientX;
-  const Y = event.clientY;
-  vertical.style.left = `${X}px`;
-  horizontal.style.top = `${Y}px`;
-  target.style.top = `${Y}px`;
-  target.style.left = `${X}px`;
-  tag.style.top = `${Y}px`;
-  tag.style.left = `${X}px`;
-  tag.innerHTML = `${X}px, ${Y}px`;
+addEventListener('load', () => {
+  const targetRect = target.getBoundingClientRect();
+  const targetHalfWidth = targetRect.width / 2;
+  const targetHalfHeight = targetRect.height / 2;
+
+
+  document.addEventListener("mousemove", (event) => {
+  const x = event.clientX;
+  const y = event.clientY;
+  vertical.style.transform = `translateX(${x}px)`;
+  horizontal.style.transform = `translateY(${y}px)`;
+  target.style.transform = `translate(${x-targetHalfWidth}px,
+    ${y-targetHalfHeight}px)`;
+  tag.style.transform = `translate(${x}px,${y}px)`;
+  tag.innerHTML = `${x}px, ${y}px`;
+  });
 });
