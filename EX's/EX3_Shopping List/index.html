@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +11,32 @@
   <script src="main.js" defer></script>
 </head>
 <body>
-  <main id = "main">
-    <div class="list">
-    <!-- Header -->
-      <div class="list__header">
-        <span>Shopping list For Summer</span>
-      </div>
-      <!-- Shopping List -->
-        <div class="items"></div>
-          <div class="list__input"> 
-            <input type="text" id="list__input__write" placeholder="내용을 입력해주세요">
-          </div>
+    <main id="main">
+      <!-- <audio loop="true" autoplay="true">
+        <source src="audio/pardise.wav" type="audio/wav">
+      </audio> -->
+      <div class="list">
+        <!-- Header -->
+        <div class="list__header">
+          <span>Shopping list For Summer</span>
+        </div>
+        <!-- Shopping List -->
+        <div class="items__output">
+          <div id="result"></div>
+        </div>
+        <div class="list__input">
+          <input
+            type="text"
+            id="list__input__write"
+            onchange="printName()"
+            placeholder="내용을 입력해주세요">
+        </div>
         <div class="add__button">
           <button class="add"><i class="fa-solid fa-plus"></i></button>
         </div>
-    </div>
-  </main>
+      </div>
+    </main>
+
 </body>
+
 </html>
