@@ -11,32 +11,31 @@
   <script src="main.js" defer></script>
 </head>
 <body>
-    <main id="main">
-      <!-- <audio loop="true" autoplay="true">
-        <source src="audio/pardise.wav" type="audio/wav">
-      </audio> -->
-      <div class="list">
+  <audio loop="true" autoplay="true">
+    <source src="audio/pardise.wav" type="audio/wav">
+  </audio>
+      <section class="list">
         <!-- Header -->
-        <div class="list__header">
-          <span>Shopping list For Summer</span>
-        </div>
-        <!-- Shopping List -->
-        <div class="items__output">
-          <div id="result"></div>
-        </div>
-        <div class="list__input">
-          <input
-            type="text"
-            id="list__input__write"
-            onchange="printName()"
-            placeholder="내용을 입력해주세요">
-        </div>
-        <div class="add__button">
-          <button class="add"><i class="fa-solid fa-plus"></i></button>
-        </div>
-      </div>
-    </main>
-
+        <header class="header">Shopping List For Summer</header>
+          <ul class="items">
+            <!-- <li class="item__row">
+              <div class="item">
+                <span class="item__name">Egg</span>
+                <button class="item__delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+              <div class="item__divider"></div>
+            </li>  // js 작성--> 
+          </ul>
+            <footer class="footer">
+              <input type="text" class="footer__input">
+                <div class="footer__button__space">
+              <button class="footer__button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            </footer>
+      </section>
 </body>
-
 </html>
