@@ -50,105 +50,115 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+ul {
+    padding: 0;
+  }
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 body {
+  padding: 100px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: url(imgs/beach.png);
-}
-
-iframe{
-  opacity: 0.1;;
-}
-
-#main {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  margin-top: 100px;
+  justify-content: center;
 }
 
-  .list {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    height: 80%;
-    border: 1px solid var(--color-grey);
-    border-radius: 20px;
-    z-index: 1;
-    
-  }
-  
-  .list__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-medium);
-    color: var(--color-white);
-    height : 60px;
-    border-radius: 19px 19px 0 0;
-    background: linear-gradient(90deg, rgb(6, 30, 167) 23%, rgb(219, 223, 241) 93%);
-    font-family: 'CookieRun';
-  }
 
-  .items__output {
-    width: 100%;
-    height: 80%;
-    background-color: #f1e9dd;
-    line-height: 0 14px 0 10px;
-    font-size: larger;
-    text-indent: 10px;
-    font-weight: bold;
-    font-family: 'CookieRun';
-  }
+.list {
+  width: 700px;
+  margin:auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #f6ebde;
+  font-family: 'CookieRun';
+}
 
-  .list__input {
-    height: 5%;
-    background-color: var(--color-beige);
-    opacity: 0.5;
+.header {
+  font-size: 24px;
+  color: var(--color-white);
+  width: 700px;
+  height : 50px;
+  padding: 8px;
+  border-radius: 19px 19px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgb(6, 30, 167) 23%,
+    rgb(219, 223, 241) 93%);
+  font-family: 'CookieRun';
+}
 
-  }
+.items {  
+  width: 700px;
+  height: 800px;
+  overflow-y: auto;
+}
 
-  input{
-    height: 98%;
-    width: 100%;
-    font-size: var(--font-regular);
-    text-indent: 5px;
-    color: 3px solid var(--color-black);
-    font-weight: bold;
-    font-family: 'CookieRun';
-  }
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+  font-size: 24px;
 
-  button{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-  }
+}
 
-  .add__button :hover {
-    cursor : pointer;
-  }
+.item__delete {
+  font-size: 20px;
+  transition: all 300ms ease-in;
+}
 
-  /* .add__button:hover:before{ 
-    transform: rotate(90deg); 
-  }
+.item__delete:hover {
+  color: red;
+  transform: scale(1.1);
+  cursor : pointer;
+}
 
-  .add__button:hover:after{ 
-    transform: rotate(180deg); 
-  } */
+.item__divider {
+  width: 90%;
+  height: 1px;
+  background-color: rgb(84, 74, 20);
+  margin: auto;
+}
 
-  .add__button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    border-radius:0 0 19px 19px;
-    background-color: rgb(3, 37, 190);
-  
-  }
+.footer {
+  border-radius: 0 0 19px 19px;
+  background: linear-gradient(
+    90deg,
+    rgb(6, 30, 167) 23%,
+    rgb(219, 223, 241) 93%);
+}
 
-  
+.footer__input {
+  width: 100%;
+  height: 50px;
+  border:none;
+  outline: none;
+  font-size: 24px;
+  padding: 0 16px;
+  font-family: 'CookieRun';
+}
+
+.footer__button__space {
+  padding: 8px;
+}
+
+.footer__button {
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  background-color: black;
+  border-radius: 50%;
+  color: var(--color-white);
+  transition: transform 300ms ease-in;
+}
+
+.footer__button:hover {
+  transform: scale(1.1);
+
+}
